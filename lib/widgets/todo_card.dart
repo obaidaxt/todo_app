@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Todocard extends StatelessWidget {
-  const Todocard({super.key});
+  final String vartitle;
+  const Todocard({super.key, required this.vartitle});
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +15,11 @@ class Todocard extends StatelessWidget {
           borderRadius: BorderRadius.circular(11),
           color: const Color.fromRGBO(209, 224, 224, 0.2),
         ),
-        child: const Row(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('data ddd'),
-            Icon(
+            Text(vartitle),
+            const Icon(
               Icons.close,
               size: 27,
               color: Colors.red,

@@ -38,18 +38,27 @@ class _TodoAppState extends State<TodoApp> {
               fontSize: 33, fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
-      body: const SizedBox(
+      body: SizedBox(
         width: double.infinity,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Todocard(),
-            Todocard(),
-            Todocard(),
-            Todocard(),
+            ...allTasks.map((item) => Todocard(vartitle: item.title)),
           ],
         ),
       ),
     );
   }
 }
+
+class Task {
+  String title;
+  bool status;
+  Task({required this.status, required this.title});
+}
+
+List allTasks = [
+  Task(title: "Publish video", status: false),
+  Task(title: "Laugh louder", status: true),
+  Task(title: "GEM", status: false),
+];
