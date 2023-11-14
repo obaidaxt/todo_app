@@ -1,28 +1,34 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
-class Todocard extends StatelessWidget {
+class Todecard extends StatelessWidget {
   final String vartitle;
-  const Todocard({super.key, required this.vartitle});
+  final bool doneORnot;
+  const Todecard({Key? key, required this.vartitle, required this.doneORnot})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return FractionallySizedBox(
       widthFactor: 0.9,
       child: Container(
-        margin: const EdgeInsets.only(top: 20),
-        padding: const EdgeInsets.all(22),
+        margin: EdgeInsets.only(top: 20),
+        padding: EdgeInsets.all(22),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(11),
-          color: const Color.fromRGBO(209, 224, 224, 0.2),
-        ),
+            color: Color.fromRGBO(209, 224, 224, 0.2),
+            borderRadius: BorderRadius.circular(11)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(vartitle),
-            const Icon(
-              Icons.close,
+            Text(
+              vartitle,
+              style: TextStyle(color: Colors.white, fontSize: 22),
+            ),
+            Icon(
+              doneORnot ? Icons.check : Icons.close,
               size: 27,
-              color: Colors.red,
+              color: doneORnot ? Colors.green[400] : Colors.red,
             )
           ],
         ),
