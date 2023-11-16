@@ -15,9 +15,6 @@ class Todecard extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.only(top: 20),
         padding: EdgeInsets.all(22),
-        decoration: BoxDecoration(
-            color: Color.fromRGBO(209, 224, 224, 0.2),
-            borderRadius: BorderRadius.circular(11)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -32,6 +29,9 @@ class Todecard extends StatelessWidget {
             )
           ],
         ),
+        decoration: BoxDecoration(
+            color: Color.fromRGBO(209, 224, 224, 0.2),
+            borderRadius: BorderRadius.circular(11)),
       ),
     );
   }
