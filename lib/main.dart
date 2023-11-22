@@ -138,8 +138,8 @@ class _TodoAppState extends State<TodoApp> {
         child: Icon(Icons.add),
       ),
       backgroundColor: Color.fromRGBO(58, 66, 86, 0.7),
-      appBar: AppBar(
-        actions: [
+    appBar: AppBar(
+        actions: [  
           IconButton(
             onPressed: () {
               deleteAll();
@@ -165,10 +165,10 @@ class _TodoAppState extends State<TodoApp> {
             Counter(
                 allTodos: allTasks.length,
                 allCompleted: calculateCompletedTasks()),
-            Container(
+            Container(  
               margin: EdgeInsets.only(top: 22),
               height: 550,
-              color: Color.fromARGB(255, 55, 63, 82),
+              color: Color.fromARGB(255, 58, 66, 84),
               child: ListView.builder(
                   itemCount: allTasks.length,
                   itemBuilder: (BuildContext context, int index) {

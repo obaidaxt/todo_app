@@ -34,7 +34,7 @@ class Todecard extends StatelessWidget {
               borderRadius: BorderRadius.circular(11)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+            children: [ 
               Text(
                 vartitle,
                 style: TextStyle(
